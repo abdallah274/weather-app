@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css links -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- ggogle fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Alegreya+Sans:wght@100;300;400;500;700&family=Amatic+SC:wght@400;700&family=Inter:wght@100;200;300;400;500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Righteous&family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="py-4 container d-flex align-items-center justify-content-between">
+        <div class="logo d-flex">
+         <picture ><img src="imgaes/logo.png" alt="Weather logo"></picture>
+         <div>
+            <h1 class="text-white">Weather</h1>
+            <small>tagline goes here</small>
+         </div>
+        </div>
+        <ul class="d-flex align-items-center">
+            <li>
+                <a href="#" id="home" class="text-capitalize nav-link">home</a>
+            </li>
+            <li>
+                <a href="#" class="text-capitalize nav-link">news</a>
+            </li>
+            <li>
+                <a href="#" class="text-capitalize nav-link">live cameras</a>
+            </li>
+            <li>
+                <a href="#" class="text-capitalize nav-link">photos</a>
+            </li>
+            <li>
+                <a href="#" class="text-capitalize nav-link" id="contact">contact</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="box" id="box">
+    <div class="hero">
+  <div class="container">
+    <form class="position-relative" >
+        <input type="text"  id="search" placeholder="Find your location..." class="form-control">
+        <input type="button"  id="submit" value="Find" class="find" >
+    </form>
+  </div>
+    </div>
+ <div class="forecast-table ">
+    <div class="container">
+        <div class="forecast-container" id="forecast">
+         <!-- day one -->
+             <div class="today forecast">
+             <div class="forecast-header d-flex justify-content-between" id="today">
+                <div class="day" id="day">Thursday</div>
+                <div class="date" ><span id="date"></span> <span id="month"></span></div>
+             </div>
+             <div class="forecast-content pb-4" id="current">
+               <div class="location" id="location">Cairo</div>
+               <div class="degree d-flex">
+                <div class="num" ><h2><span id="num">17</span><sup>o</sup>C</h2></div>
+                <div class="forecast-icon mt-5">
+                    <picture id="img"><img src="imgaes/143.webp" alt=""></picture>
+                </div>
+               </div>
+               <div class="custom" id="wind"><h4>Mist</h4></div>
+               <div class="icon">
+                <span><img src="imgaes/icon-umberella.png" alt="" class="me-1"> 20% </span>
+                <span class="mx-4"><img src="imgaes/icon-wind.png" alt="" class="me-1"> 18Km/h</span>
+                <span><img src="imgaes/icon-compass.png" alt="" class="me-1"> East </span>
+               </div>
+             </div>
+             </div>
+              <!-- next day -->
+                <div class="forecast">
+                    <div class="forecast-header">
+                        <div class="day" id="next-day">Friday</div>
+                    </div>
+                    <div class="forecast-content text-center">
+                        <div class="forecast-icon mb-3">
+                            <img class="next-day-img" src="imgaes/113.png" alt="">
+                        </div>
+                        <div class="degree degree2">
+                            <h3 ><span class="next-day-tmp">20</span> <sup>o</sup>C</h3>
+                        </div>
+                        <small class="my-3 small"><h5><span class=" min-temp"></span><sup>o</sup>C</h5></small>
+                        <div class="custom"><h4 class="day-wind">Sunny</h4></div>
+                    </div>
+                </div>
+                <div class="forecast">
+                    <div class="forecast-header">
+                        <div class="day" id="next-day">Friday</div>
+                    </div>
+                    <div class="forecast-content text-center">
+                        <div class="forecast-icon mb-3">
+                            <img class="next-day-img" src="imgaes/116 (1).png" alt="">
+                        </div>
+                        <div class="degree degree3">
+                            <h3 ><span class="next-day-tmp">20</span><sup>o</sup>C</h3>
+                        </div>
+                        <small class="maiTem my-3 "><h5><span class=" min-temp"></span><sup>o</sup>C</h5></small>
+                        <div class="custom custom"><h4 class="day-wind">Partly cloudy </h4></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+ </div>
+</div>
+<div class="container d-none" id="contact-con">
+    <div class="w-100  p-3 contact"> <a href="#" class="text-capitalize">home</a> <i class="fa-solid fa-arrow-right"></i> <span class="text-white">Contact</span></div>
+   <div class="fullwidthBlock py-5 mt-4">
+   <div class="container">
+    <div class="row">
+    <div class="col-md-5">
+        <div class="contact-details">
+            <div class="map"></div>
+            <div class="contact-info  ">
+            <div class="d-flex">    <address class="pe-3"><img src="imgaes/icon-marker.png" alt=""> </address>
+                <p>Company Name INC. <br> 2803 Avenue Street, Los Angeles</p></div>
+                <a href="#" class="pe-4"><img src="imgaes/icon-phone.png" class="pe-2" alt="">+1 800 314 235</a>
+                <a href="#"><img src="imgaes/icon-envelope.png" class="pe-2" alt="">contact@companyname.com</a>
+            </div>
+          
+        </div>
+    </div>
+    <div class="col-md-6 col-md-offset-1 ps-5">
+       <div class="ps-4">
+        <h2 class="section-title">Contact us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur inventore ducimus, facilis, numquam id soluta omnis eius recusandae nesciunt vero repellat harum cum. Nisi facilis odit hic, ipsum sed!</p>
+        <form class="contact-form">
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Your name...">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Email Addresss...">
+                </div>
+            </div>
+            <div class="row mt-2 mb-2">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Company name...">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Website...">
+                </div>
+            </div>
+            <textarea placeholder="Message..."></textarea>
+            <div class="text-right">
+                
+                <input type="submit" value="submit" class="submit">
+            </div>
+        </form>
+       </div>
+    </div>
+   </div>
+</div>
+   </div>
+
+
+</div>
+
+
+ <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <form action="#" class="subscribe-form">
+                    <input type="text"  id="" placeholder="Enter your email to subscribe..." class="w-100 form-control">
+                    <input type="submit" value="Subscribe" id="subscribe">
+                </form>
+            </div>
+            <div class="col-md-3 col-md-offset-1 ps-5">
+                <div class="social-links ps-5">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="colophon">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+    </div>
+ </footer>
+
+
+    <script src="index.js"></script>
+  </body>
+</html>
